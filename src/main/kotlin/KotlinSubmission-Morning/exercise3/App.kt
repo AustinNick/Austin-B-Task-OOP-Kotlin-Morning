@@ -16,5 +16,25 @@ fun main() {
     - Isi variabel result dengan nilai: 'Anda mendapatkan nilai E.'
      */
     // Buat di bawah sini
+    fun cekNilai(nilai: Int): String {
+        return if (nilai >= 90) {
+            "Selamat! Anda mendapatkan nilai A."
+        } else if (nilai in 80..89) {
+            "Anda mendapatkan nilai B."
+        } else if (nilai in 70..79) {
+            "Anda mendapatkan nilai C."
+        } else if (nilai in 60..69) {
+            "Anda mendapatkan nilai D."
+        } else if (nilai < 60) {
+            "Anda mendapatkan nilai E."
+        } else {
+            "Nilai tidak valid."
+        }
+    }
+
+    var nilai = 80
+    var result = cekNilai(nilai)
+
+    println(result)
 
 }
