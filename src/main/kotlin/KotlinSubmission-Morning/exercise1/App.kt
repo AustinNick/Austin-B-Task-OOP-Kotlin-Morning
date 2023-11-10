@@ -24,7 +24,12 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
-    println("Group kami $groupId member sebagai berikut: $groupMember. Sesi yang kami dapatkan ialah $session")
+    println("\nGroup kami adalah $groupId dengan member sebagai berikut: ")
+    groupMember.forEachIndexed { index, it ->
+        println("${index + 1}. $it")
+    }
+    println("Sesi yang kami dapatkan ialah $session")
+
     return Any()
 }
 
@@ -34,9 +39,8 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  * Kemudian akses item yang berisi nama Anda dari variable tersebut, lalu jadikan nilai kembalian untuk fungsi myTeam ini
  *
  */
-fun myTeam(): List<Any> {
-    val members = listOf<Any>("Austin Nicholas Tham", "Muhammad Firdaus", "Mutiara Sabrina", "Rahmad Noor Ikhsan", "Dito Iqbal", "Fadhila Risfaniatul Z", "Aina Fazla", "Rizka Hilmi P", "Alfin Satriawan", "Kayla Vyanca A", "Adityo Khori R")
-    return members
+fun myTeam(members: List<Any>): List<Any> {
+    return listOf(members[0])
 }
 
 /**
@@ -48,16 +52,41 @@ fun myTeam(): List<Any> {
  */
 fun totalMember(): Int {
     val mentor = arrayOf<String>("Jovian", "Imam")
-    val countOfGroup = arrayOf<String>("Austin Nicholas Tham", "Muhammad Firdaus", "Mutiara Sabrina", "Rahmad Noor Ikhsan", "Dito Iqbal", "Fadhila Risfaniatul Z", "Aina Fazla", "Rizka Hilmi P", "Alfin Satriawan", "Kayla Vyanca A", "Adityo Khori R")
+    val countOfGroup = arrayOf<String>(
+        "Austin Nicholas Tham",
+        "Muhammad Firdaus",
+        "Mutiara Sabrina",
+        "Rahmad Noor Ikhsan",
+        "Dito Iqbal",
+        "Fadhila Risfaniatul Z",
+        "Aina Fazla",
+        "Rizka Hilmi P",
+        "Alfin Satriawan",
+        "Kayla Vyanca A",
+        "Adityo Khori R"
+    )
 
     return mentor.size + countOfGroup.size
 }
 
 fun main() {
+    val anggotaTeam = listOf<String>(
+        "Austin Nicholas Tham",
+        "Muhammad Firdaus",
+        "Mutiara Sabrina",
+        "Rahmad Noor Ikhsan",
+        "Dito Iqbal",
+        "Fadhila Risfaniatul Z",
+        "Aina Fazla",
+        "Rizka Hilmi P",
+        "Alfin Satriawan",
+        "Kayla Vyanca A",
+        "Adityo Khori R"
+    )
 
     myProfile()
 
-    val myTeam = myTeam()
+    val myTeam = myTeam(anggotaTeam)
     println("My team is: $myTeam")
 
     val totalMember = totalMember()
@@ -68,6 +97,6 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("Eternal Light", myTeam, "Morning")
+    groupDetail("Eternal Light", anggotaTeam, "Morning")
 
 }
