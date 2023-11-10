@@ -39,8 +39,8 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  * Kemudian akses item yang berisi nama Anda dari variable tersebut, lalu jadikan nilai kembalian untuk fungsi myTeam ini
  *
  */
-fun myTeam(members: List<Any>): List<Any> {
-    return listOf(members[0])
+fun myTeam(members: List<Any>): Any {
+    return members[0]
 }
 
 /**
@@ -52,19 +52,6 @@ fun myTeam(members: List<Any>): List<Any> {
  */
 fun totalMember(members: List<String>): Int {
     val mentor = arrayOf<String>("Jovian", "Imam")
-//    val countOfGroup = arrayOf<String>(
-//        "Austin Nicholas Tham",
-//        "Muhammad Firdaus",
-//        "Mutiara Sabrina",
-//        "Rahmad Noor Ikhsan",
-//        "Dito Iqbal",
-//        "Fadhila Risfaniatul Z",
-//        "Aina Fazla",
-//        "Rizka Hilmi P",
-//        "Alfin Satriawan",
-//        "Kayla Vyanca A",
-//        "Adityo Khori R"
-//    )
 
     return mentor.size + members.size
 }
