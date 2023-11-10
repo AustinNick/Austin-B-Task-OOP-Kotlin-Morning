@@ -8,6 +8,7 @@ fun main() {
      *
      */
 
+    var hero = Hero()
 
     /**
      * Latihan 2
@@ -16,7 +17,7 @@ fun main() {
      *
      */
 
-
+    hero.setProfile("Austin Nicholas Tham", 20, 180)
 
     /**
      * Latihan 3
@@ -24,7 +25,7 @@ fun main() {
      *
      */
 
-
+    hero.profile()
 
     /**
     Challenge:
@@ -63,9 +64,15 @@ fun main() {
     /**
      * Latihan 4
      * Jalankan aktivitas-aktivitas dengan memanggil fungsi-fungsi sesuai challenge diatas
-     *
+     * Saya: Eternal Light -> jalan 3x, lari 2x, makan 4x, minum 1x, lompat 5x, duduk 1x
      */
 
+    hero.jalan(3)
+    hero.lari(2)
+    hero.makan(4)
+    hero.minum(1)
+    hero.lompat(5)
+    hero.duduk(1)
 
 
     /**
@@ -74,6 +81,6 @@ fun main() {
      *
      */
 
-
+    hero.profile()
 
 }
