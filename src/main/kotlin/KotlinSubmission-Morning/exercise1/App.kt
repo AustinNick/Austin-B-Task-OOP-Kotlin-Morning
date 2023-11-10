@@ -50,23 +50,23 @@ fun myTeam(members: List<Any>): List<Any> {
  *      total mentor + jumlah anggota group
  *
  */
-fun totalMember(): Int {
+fun totalMember(members: List<String>): Int {
     val mentor = arrayOf<String>("Jovian", "Imam")
-    val countOfGroup = arrayOf<String>(
-        "Austin Nicholas Tham",
-        "Muhammad Firdaus",
-        "Mutiara Sabrina",
-        "Rahmad Noor Ikhsan",
-        "Dito Iqbal",
-        "Fadhila Risfaniatul Z",
-        "Aina Fazla",
-        "Rizka Hilmi P",
-        "Alfin Satriawan",
-        "Kayla Vyanca A",
-        "Adityo Khori R"
-    )
+//    val countOfGroup = arrayOf<String>(
+//        "Austin Nicholas Tham",
+//        "Muhammad Firdaus",
+//        "Mutiara Sabrina",
+//        "Rahmad Noor Ikhsan",
+//        "Dito Iqbal",
+//        "Fadhila Risfaniatul Z",
+//        "Aina Fazla",
+//        "Rizka Hilmi P",
+//        "Alfin Satriawan",
+//        "Kayla Vyanca A",
+//        "Adityo Khori R"
+//    )
 
-    return mentor.size + countOfGroup.size
+    return mentor.size + members.size
 }
 
 fun main() {
@@ -89,7 +89,7 @@ fun main() {
     val myTeam = myTeam(anggotaTeam)
     println("My team is: $myTeam")
 
-    val totalMember = totalMember()
+    val totalMember = totalMember(anggotaTeam)
     println("Total Member group : $totalMember")
 
     /**
