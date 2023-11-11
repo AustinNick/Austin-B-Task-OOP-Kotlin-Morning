@@ -24,12 +24,17 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 
+// !! tambahan dikit pake data class kak hehehe
+data class GroupDetails(val groupId: String, val groupMembers: List<Any>, val session: String)
+
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
     println("\nGroup kami adalah $groupId dengan member sebagai berikut: ")
     groupMember.forEachIndexed { index, it ->
         println("${index + 1}. $it")
     }
     println("Sesi yang kami dapatkan ialah $session")
+
+    return GroupDetails(groupId, groupMember, session)
 }
 
 /**
