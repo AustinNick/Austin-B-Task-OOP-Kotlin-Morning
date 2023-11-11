@@ -23,14 +23,13 @@ fun myProfile() {
  *  Latihan 2
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
+
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
     println("\nGroup kami adalah $groupId dengan member sebagai berikut: ")
     groupMember.forEachIndexed { index, it ->
         println("${index + 1}. $it")
     }
     println("Sesi yang kami dapatkan ialah $session")
-
-    return Any()
 }
 
 /**
